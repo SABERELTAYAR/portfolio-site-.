@@ -1,0 +1,98 @@
+/* الأساسيات العامة */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Cairo', sans-serif; /* خط يدعم العربية */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  direction: rtl; /* دعم اللغة من اليمين إلى اليسار */
+}
+
+/* شريط التنقل */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #005f73; /* لون خلفية احترافي */
+  padding: 1rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav a {
+    text-align: right;
+    padding: 1rem;
+  }
+}
+
+/* نموذج الاتصال */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  /* ظل خفيف لإبراز النموذج */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 5px;
+  text-align: right;
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* العرض الكامل للحاوية */
+  width: 100%;
+}
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.form-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0a9396;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.form-group button:hover {
+  background-color: #007c81;
+}
+
+/* تعديلات التصميم المتجاوب */
+@media (max-width: 600px) {
+  .contact-form {
+    margin: 1rem;
+    padding: 15px;
+  }
+}
